@@ -1,7 +1,91 @@
 <!doctype html>
-<title>STEMMIO</title>
-<h1>STEMMIO - Automagic stem creator</h1>
-<form method=post enctype=multipart/form-data>
-  <input type=file name=file>
-  <input type=submit value="Create stems">
-</form>
+
+<head>
+	<title>STEMMIO</title>
+	<link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text|Lato&display=swap" rel="stylesheet">
+	<style>
+		h1 {
+			font-family: 'Big Shoulders Text', cursive;
+			font-size: 32px;
+
+		}
+		figure {
+			font-family: 'Lato', sans-serif;
+		}
+		div {
+			  margin-right: auto;
+			  display: table;
+			  margin-left: 50px;
+
+		}
+		#desc {
+			font-family: 'Lato', sans-serif;
+			font-size: 15px;
+			  display: table;
+
+
+		}
+
+		input, form {
+						font-family: 'Lato', sans-serif;
+						font-size: 15px;
+
+		}
+	</style>
+</head>
+<body>
+			<center style="text-align: justify;">
+
+	<div id="desc" >
+		<h1>STEMMIO</h1>
+		<div id='desc' style="display: inline-block; width: 20%">
+			Stemmio lets you automagically separate audio tracks into vocal and instrumental stems. You can listen to a sample below and then make your own.
+			Stemmio uses <a href="https://github.com/deezer/spleeter">Spleeter</a> to split the tracks and <a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a> to give them to you</a>
+			<br>
+			<Br>
+			Accepts m4a, mp3, and wav. Max upload size is 10mb. Returns a zip file with two mp3s, vocal and accompaniment.
+
+
+		</div>
+		<div>
+			<figure>
+			    <figcaption>Original:</figcaption>
+			    <audio
+			        controls
+			        src="/static/demo.mp3">
+			            Your browser does not support the
+			            <code>audio</code> element.
+			    </audio>
+			</figure>
+			<figure>
+			    <figcaption>Instrumental stem:</figcaption>
+			    <audio
+			        controls
+			        src="/static/accompaniment-demo.mp3">
+			            Your browser does not support the
+			            <code>audio</code> element.
+			    </audio>
+			</figure>
+			<figure>
+			    <figcaption>Vocal stem:</figcaption>
+			    <audio
+			        controls
+			        src="/static/vocals-demo.mp3">
+			            Your browser does not support the
+			            <code>audio</code> element.
+			    </audio>
+			</figure>
+		</div>
+		</div>
+		<br>
+		<div>
+			<form method=post enctype=multipart/form-data>
+				
+			  <input type=file name=file>
+			  <input type=submit value="Create stems">
+			</form>
+		</div>
+	</div>
+		</center >
+
+</body>

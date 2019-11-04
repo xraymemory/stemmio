@@ -18,7 +18,7 @@ from spleeter.separator import Separator
 UPLOAD_FOLDER = './uploads/'
 OUTPUT_FOLDER = './output/'
 ZIP_FOLDER = './zip/'
-ALLOWED_EXTENSIONS = ['mp3', 'm4a']
+ALLOWED_EXTENSIONS = ['mp3', 'm4a', 'wav']
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
