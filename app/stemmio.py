@@ -22,7 +22,7 @@ ALLOWED_EXTENSIONS = ['mp3', 'm4a', 'wav']
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-# Limit uploads to 10MB
+# Limit uploads to 20MB
 app.config['MAX_CONTENT_LENGTH'] = 20 * 1024 * 1024
 app.secret_key = os.urandom(420)
 
