@@ -39,11 +39,21 @@
 	<div id="desc" >
 		<h1>STEMMIO</h1>
 		<div id='desc' style="display: inline-block; width: 20%">
-			Stemmio lets you automagically separate audio tracks into vocal and instrumental stems. You can listen to a sample below and then make your own.
+			Stemmio lets you automagically separate audio tracks into vocal and instrumental stems. You can listen to a sample below or just go for it and make your own.
 			Stemmio uses <a href="https://github.com/deezer/spleeter">Spleeter</a> to split the tracks and <a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a> to give them to you</a>
 			<br>
 			<Br>
-			Accepts m4a, mp3, and wav. Max upload size is 10mb. Returns a zip file with two mp3s, vocal and accompaniment.
+					<div>
+			<form method=post enctype=multipart/form-data>
+				
+			  <input type=file name=file>
+			  <input type=submit value="Create stems">
+			</form>
+		</div>
+				<br>
+			<Br>
+
+			Accepts m4a, mp3, and wav. Max upload size is 20mb. Returns a zip file with two mp3s, vocal and accompaniment. It will take around ~10sec per minute of track but trust me its doing its thing so just relax, sit back, take it all in. If you run into any trouble, tell me
 
 
 		</div>
@@ -78,13 +88,7 @@
 		</div>
 		</div>
 		<br>
-		<div>
-			<form method=post enctype=multipart/form-data>
-				
-			  <input type=file name=file>
-			  <input type=submit value="Create stems">
-			</form>
-		</div>
+
 	</div>
 		</center >
 

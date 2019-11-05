@@ -23,8 +23,8 @@ ALLOWED_EXTENSIONS = ['mp3', 'm4a', 'wav']
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 # Limit uploads to 10MB
-app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
-
+app.config['MAX_CONTENT_LENGTH'] = 20 * 1024 * 1024
+app.secret_key = os.urandom(420)
 
 def separate_stems(file_path, output_path):
     ''' Separate vocals and accompaniment into MP3s using Spleeter NN '''
@@ -81,4 +81,4 @@ def upload_file():
     return render_template("index.html")
 
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(host='0.0.0.0', port='5000')
